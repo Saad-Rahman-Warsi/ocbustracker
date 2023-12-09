@@ -5,8 +5,10 @@ COPY . /app/
 
 WORKDIR /app
 
-RUN npm run install 
+RUN npm install 
 
-RUN npm run start
+RUN npm install ng
+
+RUN npm start
 
 EXPOSE 4200
