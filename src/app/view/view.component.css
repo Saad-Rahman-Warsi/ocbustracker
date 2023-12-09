@@ -1,0 +1,32 @@
+.header {
+    margin: 1rem 0;
+    line-height: 1.3;
+}
+
+
+.number {
+    font-weight: bold;
+    font-size: 1.3333rem;
+}
+
+.indexLinkInfoCardTheme .Header {
+    display: flex;
+    align-items: flex-end;
+}
+
+.indexLink, .noLink {
+    grid-template-columns: 1rem 1fr 2rem min-content 1rem;
+    grid-template-rows: 1rem auto 0.25rem auto 1rem;
+    margin-top: 0.5556rem !important;
+    color: #00355F;
+    background-color: #F2F5F7;
+    font-size: 0.8889rem;
+}
+
+
+
+.stopNo, .stopBound {
+    font-size: 0.8889rem;
+}
+
+  

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+  <div class="row" style="background-color: #eee;">
+    <div class="col-lg-2">
+      <img src="../assets/img4.jpg" alt="Chicago" class="d-block" style="width:100%">
+    </div>
+    <div class="col-lg-10">
+      <h2>Register Your Bus Stop</h2>
+      <p>Register your bus stop by entering its number. For specific route details, enter the route number along with the bus stop number. For instance, input bus stop number 3642 and route number 5 to receive information about buses arriving at bus stop 3642 on route 5.</p>
+    </div>
+  </div>
+
+  <div class="row pb-5">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <form>
+        <div class="mb-3 mt-3">
+          <label for="bsno" class="form-label">Bus Stop Number:</label>
+          <input type="text" class="form-control" id="bsno" placeholder="Enter Bus Stop Number" name="bsno" #bsno>
+        </div>
+        <div class="mb-3">
+          <label for="routeno" class="form-label">Route Number:</label>
+          <input type="text" class="form-control" id="routeno" placeholder="Enter Route Number" name="routeno" #routeno>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="post(bsno.value ,routeno.value)">Submit</button> 
+      </form>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+
+</div>
+
+
