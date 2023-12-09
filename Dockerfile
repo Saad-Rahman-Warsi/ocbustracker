@@ -7,6 +7,6 @@ WORKDIR /app
 
 RUN npm install 
 
-CMD ["ng", "serve"]
+CMD ["npm", "start"]
 
 EXPOSE 4200
