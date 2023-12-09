@@ -9,6 +9,6 @@ RUN npm install
 
 RUN npm install ng
 
-CMD ["npm", "start"]
+CMD ["ng", "serve"]
 
 EXPOSE 4200
