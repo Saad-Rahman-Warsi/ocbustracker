@@ -11,6 +11,6 @@ RUN npm install ng
 
 RUN npm run build
 
-CMD ["ng", "serve"]
+CMD ["npm", "run", "start"]
 
 EXPOSE 4200
