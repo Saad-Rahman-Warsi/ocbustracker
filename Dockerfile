@@ -9,7 +9,7 @@ RUN npm install
 
 RUN npm install ng 
 
-RUN npm install @angular
+RUN npm install -g @angular/cli
 
 RUN npm run build
 
