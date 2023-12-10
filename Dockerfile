@@ -7,7 +7,7 @@ WORKDIR /app
 
 RUN npm install ng 
 
-RUN npm install -g @angular/cli
+RUN npm install @angular/cli
 
 RUN npm install 
 
