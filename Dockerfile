@@ -1,4 +1,4 @@
-FROM node:alpine-lts AS build
+FROM node:lts-alpine AS build
 
 COPY package.json /app/
 COPY . /app/
