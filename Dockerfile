@@ -11,7 +11,9 @@ RUN npm install ng
 
 RUN npm install -g @angular/cli
 
-RUN npm run build
+COPY . /app/
+
+RUN npm run build:ssr
 
 CMD ["npm", "run", "start"]
 
