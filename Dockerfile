@@ -5,15 +5,13 @@ COPY . /app/
 
 WORKDIR /app
 
-RUN npm install ng 
+CMD ["npm", "install", "ng"]
 
-RUN npm install @angular/cli
+CMD ["npm","install", "-g", "@angular/cli"]
 
-RUN npm install 
+CMD [ "npm" ,"install" ]
 
-COPY  . /app/
-
-RUN npm run build
+CMD ["npm", "run", "build"]
 
 CMD ["npm", "run", "start"]
 
