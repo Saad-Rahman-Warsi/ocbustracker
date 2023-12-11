@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --disable-host-check",
-    "build": "npm install @angular/cli && ng build",
+    "build": "ng build && npm install @angular/cli",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "ts-node -P ./server.tsconfig.json ./server.ts",
