@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "ts-node -P ./server.tsconfig.json ./server.ts"
+    "server": "ts-node -P ./server.tsconfig.json ./server.ts",
     "build:ssr": "ng build --prod vitorspace && ng run vitorspace:server:production"
   },
   "private": true,
