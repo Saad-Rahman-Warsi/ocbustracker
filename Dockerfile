@@ -7,10 +7,7 @@ WORKDIR /app
 #### copy both 'package.json' and 'package-lock.json' (if available)
 COPY . . 
 
-#### install angular cli
-RUN npm install -g @angular/cli
 
-RUN npm install -g @angular-devkit/build-angular
 
 #### install project dependencies
 RUN npm install 
