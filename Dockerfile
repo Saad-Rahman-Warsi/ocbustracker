@@ -10,6 +10,8 @@ COPY package*.json ./
 #### install angular cli
 RUN npm install -g @angular/cli
 
+RUN npm install -g @angular-devkit/build-angular
+
 #### install project dependencies
 RUN npm install --prod
 
