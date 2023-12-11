@@ -19,7 +19,7 @@ RUN npm install --prod
 COPY . .
 
 #### generate build --prod
-RUN npm run build:ssr
+
 
 
 ### STAGE 2: Run ###
