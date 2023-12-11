@@ -26,7 +26,7 @@ FROM nginxinc/nginx-unprivileged
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 #### copy artifact build from the 'build environment'
-COPY --from=build /app/dist/ocbustracker /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 8080
 
