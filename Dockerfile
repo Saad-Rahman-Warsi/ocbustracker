@@ -22,11 +22,12 @@ RUN npm run build --prod
 ### STAGE 2: Run ###
 
 FROM bitnami/nginx as ngi
-#### copy nginx conf
 
+#### copy nginx conf
+COPY ./nginx.conf /opt/bitnami/nginx/conf/nginx.conf
 
 #### copy artifact build from the 'build environment'
-COPY  app/dist/octran /usr/share/nginx/html
+COPY  /app/dist/octran /usr/share/nginx/html
 
 EXPOSE 8080
 
