@@ -2,10 +2,10 @@
 FROM node:lts-alpine AS build
 
 #### make the 'app' folder the current working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 #### copy both 'package.json' and 'package-lock.json' (if available)
-COPY package*.json ./
+COPY . . 
 
 #### install angular cli
 RUN npm install -g @angular/cli
@@ -13,10 +13,10 @@ RUN npm install -g @angular/cli
 RUN npm install -g @angular-devkit/build-angular
 
 #### install project dependencies
-RUN npm install --prod
+RUN npm install 
 
 #### copy things
-COPY . .
+RUN npm run build --prod
 
 #### generate build --prod
 
