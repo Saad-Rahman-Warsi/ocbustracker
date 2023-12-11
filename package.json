@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm install && ng serve --host 0.0.0.0 --disable-host-check",
+    "start": "npm install -g npm@9.5.1 && npm install -g node@18.14.2 && npm install -g @angular/cli && ng serve --host 0.0.0.0 --disable-host-check",
     "build": "ng build && npm install ng",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
