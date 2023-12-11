@@ -20,10 +20,10 @@ RUN npm run build --prod
 
 
 ### STAGE 2: Run ###
-FROM nginxinc/nginx-unprivileged
+FROM bitnami/nginx as ngi
 
 #### copy nginx conf
-COPY ./nginx.conf /etc/nginx/conf/default.conf
+COPY ./nginx.conf /opt/bitnami/nginx/conf/nginx.conf
 
 #### copy artifact build from the 'build environment'
 COPY --from=build /app/dist /usr/share/nginx/html
