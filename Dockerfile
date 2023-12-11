@@ -20,15 +20,15 @@ RUN npm run build --prod
 
 
 ### STAGE 2: Run ###
-FROM bitnami/nginx as ngi
+FROM nginx:alpine
 
 #### copy nginx conf
-COPY ./nginx.conf /opt/bitnami/nginx/conf/nginx.conf
+
 
 #### copy artifact build from the 'build environment'
-COPY --from=build /app/dist/ /usr/share/nginx/html
+COPY  /app/dist/ /usr/share/nginx/html
 
-EXPOSE 8080
+EXPOSE 80
 
 #### don't know what this is, but seems cool and techy
 CMD ["nginx", "-g", "daemon off;"]
