@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0 --disable-host-check",
-    "build": "ng build && npm install @angular/cli",
+    "start": "npm install -g @angular/cli && ng serve --host 0.0.0.0 --disable-host-check",
+    "build": "ng build && npm install -g @angular/cli",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "ts-node -P ./server.tsconfig.json ./server.ts",
