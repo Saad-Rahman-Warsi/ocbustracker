@@ -7,7 +7,7 @@ import { Respose } from './model/Response';
   providedIn: 'root'
 })
 export class GetServiceService {
-  url:string="http://ocbustracker-59-saadrahmanwarsi-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/viewbus/"
+  url:string="http://ocbustracker-60-saadrahmanwarsi-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/viewbus/"
   constructor(private http: HttpClient) { }
   getEmployeeById()
   {
