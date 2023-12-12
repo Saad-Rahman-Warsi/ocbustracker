@@ -7,7 +7,7 @@ import { HttpClient,HttpErrorResponse,HttpHeaders,HttpParams } from '@angular/co
 export class PostserviceService {
 
   httpParams: HttpParams = new HttpParams();
-  url:any="http://ocbustracker-58-saadrahmanwarsi-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/registerbus";
+  url:any="http://ocbustracker-59-saadrahmanwarsi-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/registerbus";
   constructor(private http: HttpClient) { }
 
   save(station:number,route:number)
