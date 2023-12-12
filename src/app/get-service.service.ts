@@ -7,7 +7,7 @@ import { Respose } from './model/Response';
   providedIn: 'root'
 })
 export class GetServiceService {
-  url:string="http://apigateway-route-saadrahmanwarsi-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/tibua/"
+  url:string="http://ocbustracker-58-saadrahmanwarsi-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/viewbus/"
   constructor(private http: HttpClient) { }
   getEmployeeById()
   {
