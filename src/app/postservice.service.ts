@@ -14,7 +14,7 @@ export class PostserviceService {
 
   save(station:number,route:number)
   {
-    url:any=this.url_b+"/"+station+"/"+route;
+    var url:any=this.url_b+"/"+station+"/"+route;
     return this.http.get<any>(url);    
     
    
