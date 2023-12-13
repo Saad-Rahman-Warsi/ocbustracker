@@ -9,21 +9,13 @@ import { HttpClient,HttpErrorResponse,HttpHeaders,HttpParams } from '@angular/co
 export class PostserviceService {
 
   httpParams: HttpParams = new HttpParams();
-  url:any="/registerbus";
+  url:any="http://sendpost-route-saadrahmanwarsi-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com";
   constructor(private http: HttpClient) { }
 
   save(station:number,route:number)
   {
-    const headers = new HttpHeaders();
-    //const headers = new Headers();
-    headers.append("Access-Control-Allow-Origin" , '*');
-    headers.append('Access-Control-Allow-Methods ',' POST');
-    headers.append('Access-Control-Allow-Credentials','true');
-    headers.append('Access-Control-Allow-Headers' ,'Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range');
-     
-    return this.http.post<any>(this.url,{"station":station,"route":route},{
-       headers: headers
-     });    
+    this.url=this.url+"/"+station+"/"+route;
+    return this.http.get<any>(this.url);    
     
    
   }
