@@ -13,7 +13,15 @@ export class PostserviceService {
   save(station:number,route:number)
   {
    // const headers = new HttpHeaders().set();
-     return this.http.post<any>(this.url,{"station":station,"route":route});    
+    const headers = new HttpHeaders().set();
+    headers.append("Access-Control-Allow-Origin" , '*');
+    headers.append('Access-Control-Allow-Methods ',' POST');
+    headers.append('Access-Control-Allow-Credentials','true');
+    headers.append('Access-Control-Allow-Headers' ,'Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range');
+     
+    return this.http.post<any>(this.url,{"station":station,"route":route},{
+       headers: headers
+     });    
     
    
   }
