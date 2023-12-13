@@ -14,7 +14,7 @@ export class PostserviceService {
 
   save(station:number,route:number)
   {
-    const headers = new HttpHeaders().set();
+    const headers = new HttpHeaders();
     //const headers = new Headers();
     headers.append("Access-Control-Allow-Origin" , '*');
     headers.append('Access-Control-Allow-Methods ',' POST');
