@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpErrorResponse,HttpHeaders,HttpParams } from '@angular/common/http'
+import {Headers} from 'angular2/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,7 @@ export class PostserviceService {
   save(station:number,route:number)
   {
    // const headers = new HttpHeaders().set();
-    const headers = new HttpHeaders().set();
+    const headers = new Headers();
     headers.append("Access-Control-Allow-Origin" , '*');
     headers.append('Access-Control-Allow-Methods ',' POST');
     headers.append('Access-Control-Allow-Credentials','true');
