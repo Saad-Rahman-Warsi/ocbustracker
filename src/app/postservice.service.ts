@@ -9,13 +9,13 @@ import { HttpClient,HttpErrorResponse,HttpHeaders,HttpParams } from '@angular/co
 export class PostserviceService {
 
   httpParams: HttpParams = new HttpParams();
-  url_b:any="http://ocbustracker-60-saadrahmanwarsi-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/registerbus";
+  url:any="http://localhost:9193/tibua/save";
   constructor(private http: HttpClient) { }
 
   save(station:number,route:number)
   {
-    var url:any=this.url_b+"/"+station+"/"+route;
-    return this.http.get<any>(url);    
+  
+    return this.http.get<any>(url,{"station":station,"route":route});    
     
    
   }
