@@ -9,7 +9,7 @@ import { HttpClient,HttpErrorResponse,HttpHeaders,HttpParams } from '@angular/co
 export class PostserviceService {
 
   httpParams: HttpParams = new HttpParams();
-  url:any="http://localhost:9193/tibua/save";
+  url:any="http://localhost:9391/tibua/save";
   constructor(private http: HttpClient) { }
 
   save(station:number,route:number)
