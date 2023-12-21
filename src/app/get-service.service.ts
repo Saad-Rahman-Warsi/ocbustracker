@@ -7,13 +7,14 @@ import { Respose } from './model/Response';
   providedIn: 'root'
 })
 export class GetServiceService {
-  url:string="http://localhost:9391/tibua/"
+  url:string="####ENTER THE URL HERE####" 
   constructor(private http: HttpClient) { }
   getEmployeeById()
   {
+      
       var headers=new Headers();
       headers.append('Content-Type','application/json');
-      return this.http.get<Respose>(this.url).pipe(catchError(this.errorhandler))
+      return this.http.get<Respose>(this.url+"/tibua/").pipe(catchError(this.errorhandler))
   }
   errorhandler(error: HttpErrorResponse)
   {
